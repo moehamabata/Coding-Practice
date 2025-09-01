@@ -45,7 +45,7 @@
 ```html
 <!-- 文字コードを「utf-8」にしてください -->
     <meta charset="utf-8">
-```html
+```
 
 メモ：
 ・文字コードの指定に用いられる
@@ -57,7 +57,7 @@
 ```html
 <!-- タイトルを「Progate」にしてください -->
     <title>Progate</title>
-```html
+```
 
 メモ：
 ・ページのタイトルの設定に用いられる
@@ -68,7 +68,7 @@
 ```html
 <!-- 「stylesheet.css」を読み込んでください -->
     <link rel="stylesheet" href="stylesheet.css">
-```html
+```
 
 メモ：
 ・HTMLからCSSを読み込むために必要なもの
@@ -81,16 +81,22 @@
 - <div>要素のdivは、「division」の略
 - 要素をグループ化するために使用される
 
-```ヘッダーの<div>要素
+```html
+ヘッダーの<div>要素
 <div class="header">
 </div>
+```
 
-```メインの<div>要素
+```html
+メインの<div>要素
 <div class="main">
 </div>
+```
 
-```フッターの<div>要素
+```html
+フッターの<div>要素
 <div class="futter">
 </div>
+```
 
 **4. ヘッダーの枠組み**
