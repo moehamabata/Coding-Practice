@@ -99,4 +99,11 @@
 </div>
 ```
 
-**4. ヘッダーの枠組み**
+**4. ヘッダーの構造**
+
+・枠組み
+<!-- <div>要素を追加し、「header-logo」というclassをつけてください -->
+　<div class="header-logo">Progate</div>
+      
+　<!-- <div>要素を追加し、「header-list」というclassをつけてください -->
+　 <div class="header-list"></div>
