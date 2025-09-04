@@ -99,11 +99,14 @@
 </div>
 ```
 
-**4. ヘッダーの構造**
+**5. リストのマークをなくす**
 
-・枠組み
-<!-- <div>要素を追加し、「header-logo」というclassをつけてください -->
-　<div class="header-logo">Progate</div>
-      
-　<!-- <div>要素を追加し、「header-list」というclassをつけてください -->
-　 <div class="header-list"></div>
+```html
+/* list-styleプロパティを用いて、<li>要素の黒点を取り除いてください */
+li {
+  list-style: none;
+}
+```
+
+メモ：
+<li>リストにlist-styleプロパティを用いてnoneを指定すると、リストの先端のマークを消すことができる。
