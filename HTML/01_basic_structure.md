@@ -24,5 +24,14 @@
 
 メモ:
 
-・HTMLの基本はDOCTYPE宣言
-・htmlの中に、要素としてheader、body、footerなどがある
+・HTMLの中に、要素としてheader、body、footerなどがある
+
+## まとめ
+
+- HTMLを記述する際にはDOCTYPE宣言を行う。
+- HTMLの中に、要素としてheader、body、footerなどがある 
+
+## 気づき・反省
+
+- タグの入れ子を間違えやすいので注意が必要
+- 実際に書いてみると理解が深まる
