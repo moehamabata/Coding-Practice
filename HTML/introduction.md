@@ -13,30 +13,6 @@
 
 ### HTML・CSSの基本的な要素
 
-**4. レイアウト**
-
-- レイアウトは<div>要素によって構成されている
-- <div>要素のdivは、「division」の略
-- 要素をグループ化するために使用される
-
-```html
-ヘッダーの<div>要素
-<div class="header">
-</div>
-```
-
-```html
-メインの<div>要素
-<div class="main">
-</div>
-```
-
-```html
-フッターの<div>要素
-<div class="futter">
-</div>
-```
-
 **5. リストのマークをなくす**
 
 ```html
