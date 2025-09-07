@@ -8,10 +8,9 @@
 ```
 
 メモ:
+- HTMLを記述する際にはDOCTYPE宣言を行う。
 
-・HTMLを記述する際にはDOCTYPE宣言を行う。
-
-**2. htmlの基本的な要素**
+**2. HTMLの基本的な要素**
 ```html
 <!-- <html>要素を追加してください -->
 <html>
@@ -24,7 +23,7 @@
 
 メモ:
 
-・HTMLの中に、要素としてheader、body、footerなどがある
+- HTMLの中に、要素としてheader、body、footerなどがある
 
 ## まとめ
 
