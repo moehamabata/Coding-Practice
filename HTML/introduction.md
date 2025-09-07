@@ -150,4 +150,52 @@ float: left;を指定することで、上記のように要素を左から並�
 }
 ```
 メモ：
-上下左右の４方向全てではなく、特定のある方向のみに余白を残したい場合は、上記のように「pandding-top: 値;」と記載することでその方向に余白が追加される。
+上下左右の４方向全てではなく、特定のある方向のみに余白を残したい場合は、上記のように「pandding-top: 値;」と記載することでその方向に余白が追加される。下は「pannding-bottom」、右は「pandding-right」、左は「padding-left」となる。
+
+<paddingをまとめて書く>
+・個別指定
+```html
+.logo1 {
+   padding-top: 20px;
+   padding-right: 10px;
+   padding-bottom: 20px;
+   padding-left: 10px;
+}
+```
+
+・省略形①
+```html
+.logo1 {
+  padding: 20px 10px 20px 10px;
+}
+```
+メモ：
+値を４つをスペース区切りで指定した場合、「上」「右」「下」「左」の順となる。
+
+・省略形②
+```html
+.logo1{
+   padding: 20px 10px;
+}
+```
+メモ：
+値を２つスペース区切りで指定した場合、「上下」「左右」の順となる。
+
+**8. フッターの構造**
+<入れ子のセレクタ>
+```html
+<div class="header-list">
+   <ul>
+     <li>ヘッダーのリスト</li>
+     <li>ヘッダーのリスト</li>
+</div>
+
+<div class="footer-list">
+  <ul>
+    <li>フッターのリスト</li>
+  </ul>
+</div>
+```
+メモ：
+「.header-list」の後にスペースを空けて「li」と続けると、「header-list」の中の<li>要素のみCSSを適用することができる。
+ヘッダーの<li>要素とフッターの<li>要素と、それぞれに別のCSSを適用することが可能。
