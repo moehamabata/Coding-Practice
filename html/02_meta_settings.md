@@ -45,8 +45,10 @@
 - href属性で読み込んだCSSファイルを指定する
 
 ## 気づき・反省点
+```html
 <link rel="stylesheet"
-　　　　href="stylesheet.css">について📝
+　　　　href="stylesheet.css">について
+```
 
 1.〈link〉→タグの名前。
 - HTMLの要素である。
@@ -68,7 +70,7 @@
 - rel  → そのリソースとの関係
 - href → そのリソースのURL
 
-（まとめ）
+（要約）
 - link →リンクするタグ
 - rel＝"stylesheet" → これはスタイルシートである
 - href＝"stylesheet.csg" → このファイルを読み込んで
