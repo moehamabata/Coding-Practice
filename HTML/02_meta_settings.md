@@ -45,3 +45,32 @@
 - href属性で読み込んだCSSファイルを指定する
 
 ## 気づき・反省点
+<link rel="stylesheet"
+　　　　href="stylesheet.css">について📝
+
+1.〈link〉→タグの名前。
+- HTMLの要素である。
+- 外部ファイル(CSSなど)をHTMLにリンクするために使われる。
+
+2.rel＝"stylesheet"は関係(relationship)
+- rel属性→ リンク先のファイルとこのHTMLの関係を指定する。
+- "stylesheet"とすることで、「このリンク先はスタイルシート(CSS)である」ということを伝えている。
+
+3.href＝"stylesheet.css"はリンク先のURL
+- hrefは"hyperlink reference"の略
+- リンクする先のファイルの場所(URL)を否定する
+- ここでは、"stylesheet.css"という名前のCSSファイルを読み込んでいる
+
+
+３つに分かれている理由
+- HTMLでは、要素(タグ)にはそれぞれ必要な情報を属性(attribute)として付ける
+- link → 外部リソースを読み込むタグ
+- rel  → そのリソースとの関係
+- href → そのリソースのURL
+
+（まとめ）
+- link →リンクするタグ
+- rel＝"stylesheet" → これはスタイルシートである
+- href＝"stylesheet.csg" → このファイルを読み込んで
+
+それぞれで役割が違うので３つに分かれている。
