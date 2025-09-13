@@ -15,7 +15,7 @@
 ```
 
 ## 代表的なテキストスタイル用CSSプロパティ
-①基本のテキストスタイル
+**1 基本のテキストスタイル**
 - color → 文字色を指定(例: color: red;)
 - font-size→文字の大きさを指定（例: font-size: 16px;）
 - font-family→フォントの種類を指定(例: font-family: Arial;)
@@ -23,7 +23,7 @@
 - font-style→文字のスタイル(例: font-style: italic;)
 - text-align→テキストの水平位置(例: text-aligh: center;)
 
-②テキストの装飾・効果
+**2 テキストの装飾・効果**
 - text-decoration→下線・取消線などを選択(例: text-decoration: underline;)
 - text-transform→大文字・小文字の変換(例: text-transform: uppercase;)
 - letter-spacing→文字間の感覚を調整(例: letter-spacing: 2px;)
@@ -34,9 +34,8 @@
 - direction→テキストの方向(例: direction: rtl;)
 - 
 
-## まとめ
+まとめ：
 - テキストスタイルを整えることで、読みやすさ・デザイン性が大きく変わる
 
-
-## 気づき・反省点
+気づき・反省点：
 - 日本語のフォント指定では複数の候補をしておくこと。
