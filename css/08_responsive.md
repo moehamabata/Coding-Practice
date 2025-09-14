@@ -30,6 +30,7 @@ h1 {
   }
 }
 
+```css
 /* タブレット以上（幅601px〜1024px） */
 @media (min-width: 601px) and (max-width: 1024px) {
   .container {
@@ -42,17 +43,21 @@ h1 {
 
 
 **3. モバイルファースト**
+```css
 /* 基本：スマホ用（小さい画面） */
 .container {
   grid-template-columns: 1fr;
 }
+```
 
+```css
 /* 大きい画面になったら調整 */
 @media (min-width: 768px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+```
 
 メモ：
 - まずはスマートフォン向けのCSSを書く → そこからPC用に広げていく設計方法
