@@ -1,6 +1,7 @@
 ### レイアウト
 
 **1. ボックスモデル**
+メモ：
 - CSSレイアウトの基本中の基本
   
 ```css
@@ -19,9 +20,8 @@
 - 幅・高さの指定（width, height）
 - box-sizingの違い（content-box/border-box）
 
-**2. displayプロパティ**
 
-**3. positionプロパティ**
+**２. positionプロパティ**
 ```css
 .box {
   position: absolute;
@@ -36,3 +36,31 @@
 - absolute → 親要素を基準に絶対配置
 - fixed → 画面に固定
 - sticky → スクロールに応じて固定もしくは解除
+
+
+**3. Flexbox**
+```css
+.container {
+  display: flex;
+  justifi-content: space-between;
+  align-items: center;
+}
+```
+
+メモ：
+- 1次元レイアウト（横方向か縦方向か）
+- align-items → 縦揃え
+- justify-content → 横揃え
+- align-self → 個別要素の縦揃え
+
+
+**4. Grid**
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+```
+メモ：
+- gap → 行列の隙間
+- grid-area → 要素の位置指定
