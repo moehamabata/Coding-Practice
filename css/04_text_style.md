@@ -32,10 +32,11 @@
 - text-shadow→テキストに影をつける(例: text-shadow: 2px 2px shadow;)
 - white-space→空白や改行の扱いを指定(例: while-shadow: nowrap;)
 - direction→テキストの方向(例: direction: rtl;)
-- 
+
 
 まとめ：
 - テキストスタイルを整えることで、読みやすさ・デザイン性が大きく変わる
+
 
 気づき・反省点：
 - 日本語のフォント指定では複数の候補をしておくこと。
