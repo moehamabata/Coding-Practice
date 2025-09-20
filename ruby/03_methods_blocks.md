@@ -68,6 +68,44 @@ end
 - each メソッドは配列の要素を順に取り出してブロックに渡す
 - |変数| の部分に要素が入る
 
+```ruby
+names = ["chiikawa","Hachiware","Usagi"]
+# putsで出力されるのは配列
+ puts names
+#  配列の要素に対してそれぞれ操作を行う
+names.each do |moe|
+    # 配列の要素
+ puts moe
+#  配列に対して再定義する
+ names = "moe"
+ test = "100"
+ puts "コメント"
+#  再定義した値を出力
+ puts names
+end
+# 再定義したのはローカル変数としてなので、グローバル変数に変化はない
+ puts names
+```
+```ruby
+>_ コンソール
+chiikawa
+Hachiware
+Usagi
+chiikawa
+コメント
+moe
+Hachiware
+コメント
+moe
+Usagi
+コメント
+moe
+moe
+```
+メモ：
+- 配列の要素を途中で上書きし、出力することで新しい変数になる
+- 元々定義されていた値を再定義することで、変更後のものとして出力される
+
 **2. ブロックを {} で書く**
 ```ruby
 [1, 2, 3].each { |n| puts n * 2 }
