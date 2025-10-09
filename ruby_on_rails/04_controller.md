@@ -44,3 +44,4 @@ private
 end
 ```
 メモ：
+- PostsControllerは、投稿（Post）に関する処理を担当するクラス
