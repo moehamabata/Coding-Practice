@@ -9,7 +9,7 @@
 rails generate model Post tittle:string content:text
 ```
 メモ：
-- これでpostテーブルが作成される
+- これでapp/models/post.rbが作成される
 - tittle - 投稿のタイトル名
 - content - 本文
 
@@ -17,4 +17,5 @@ rails generate model Post tittle:string content:text
 - Modelコマンドを打つことでtittleとcontentのカラムを持つ
 
 気づき・反省：
+- ここでの"post"はデータの設計図であり、Rubyで動く。「投稿」というデータをRubyの世界で扱うための設計書です。
 - Modelの役割は幅広いが、書き込む時はModelが指示を出すというとことではないので認識違いが起こらないようにしておく
