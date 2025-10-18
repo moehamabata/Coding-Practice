@@ -4,7 +4,7 @@
 - ブラウザ→ルーターに飛んできたリクエストをControllerが受け、Viewに何を表示させるかを決まる場所でもある
 
 **1. コントローラー作成の基本構文**
-```rubyonrails
+```bush
 bin/rails generate controller Controller名 アクション1 アクション2...
 ```
 メモ：
