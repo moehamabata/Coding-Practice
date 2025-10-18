@@ -38,8 +38,8 @@ bundle exec rspec spec/models/post_spec.rb
 - RailsやRspecのバージョンはアプリごとに異なる場合がある
 - bundle execをつけることで「このプロジェクトのRspecを使うように」と指示を出している
 
-学んだこと：Gemfile
-- Modelコマンドを打つことでtittleとcontentのカラムを持つ
+学んだこと：
+- Gemfile：Modelコマンドを打つことでtittleとcontentのカラムを持つ
 
 気づき・反省：
 - ここでの"post"はデータの設計図であり、Rubyで動く
