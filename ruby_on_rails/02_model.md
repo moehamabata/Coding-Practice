@@ -15,7 +15,7 @@ rails generate model モデル名
 rails g model モデル名
 ```
 メモ：
-- 省略してこのようにしてもモデルを作成することができる
+- このように省略してもモデルを作成することができる
 ```bash
 rails generate model Post tittle:string content:text
 ```
