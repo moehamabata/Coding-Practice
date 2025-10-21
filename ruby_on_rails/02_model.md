@@ -25,9 +25,22 @@ rails generate model Post tittle:string content:text
 - content - 本文
 - Modelを作成するときは、１文字目を大文字にする
 - 
-**3. Modelの作成が成功した際のコマンド**
-```bash
+**3. app/models/post.rb(モデル本体)**
+```ruby
+class Post < ApplicationRecord
+  validates :title,presence: true
+end
 ```
+メモ：
+- validates :title → titleカラムをチェックする
+- presence: true → 空欄（nilや空文字）はNG
+→ タイトルがない投稿は保存が不可能という仕組みになる
+
+（例）
+OK : Post.new(title: "テスト", content: "本文”)
+NG : Post.new(title: nil, content: "本文")
+→ 前者は”テスト”というタイトルが入っているので保存ができる。
+しかし、後者はnilとなっているので保存ができない。
 
 **4. Modelをデータベースに適用させるためのコマンド**
 ```bash
