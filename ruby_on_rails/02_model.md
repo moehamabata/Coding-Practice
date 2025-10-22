@@ -42,7 +42,43 @@ NG : Post.new(title: nil, content: "本文")
 → 前者は”テスト”というタイトルが入っているので保存ができる。
 しかし、後者はnilとなっているので保存ができない。
 
-**4. Modelをデータベースに適用させるためのコマンド**
+**4. spec/models/post_spec.rb(モデルのテスト)**
+```ruby
+require 'rails_helper'
+RSpec.describe Post, type: :model do
+  it "タイトルがあれば有効"
+    post = Post.new(title: "テストタイトル",content: "本文")
+    expect(post).to be_valid
+  end
+  
+  it "タイトルがなければ無効" do
+    post=Post.new(title: nil,content: "本文")
+    expect(post).not_to be_valid
+  end
+end
+
+メモ：
+①タイトルがあれば有効
+内容：
+- 正しいデータなら保存できる
+目的：
+- バリデーションが通るか確認
+
+②タイトルがなければ無効
+内容：
+- タイトルなしは保存できない
+目的：
+- バリデーションが効いているか確認
+
+補足：
+require 'rails_helper'
+- Railsのテスト環境を実行できるようにする
+RSpec.describe Post
+- Postモデルを対象にテストを行う
+type: :model
+- モデル用テストであることを確認
+
+**5. 実行コマンド**
 ```bash
 bundle exec rspec spec/models/post_spec.rb
 ```
@@ -52,6 +88,8 @@ bundle exec rspec spec/models/post_spec.rb
 - bundle execをつけることで「このプロジェクトのRspecを使うように」と指示を出している
 
 学んだこと：
+- モデルはデータの設計図
+- テストは設計図通り動くか確認するチェック
 - Gemfile：Modelコマンドを打つことでtittleとcontentのカラムを持つ
 
 気づき・反省：
