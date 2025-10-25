@@ -1,16 +1,9 @@
-**1. Authentication（認証）**
-- ユーザーのログイン・ログアウト管理
-- Devise を使うのが一般的
+## authentication authorization
 
-**2. Authorization（認可）**
-- 誰がどの機能を使えるかの権限管理
-- Pundit や CanCanCan を使用する
+**1. Authentication(認証)**
+- 本人確認として主に用いられる
+- (例) ログインしようとしているのが本人か否か
 
-```rubyonrails
-# Pundit例
-class PostPolicy < ApplicationPolicy
-  def update?
-    user.admin? || record.user_id == user.id
-  end
-end
-```
+**2. Authonrization(認可)**
+- 権限確認として主に用いられる
+(例)当人がどこまでしていいのかを決める、もしくは決められている仕組みのこと
