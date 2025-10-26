@@ -1,8 +1,10 @@
 ## Viewとは
 - MVCの一つ。Vにあたる
-- 画面表示を担当
-- HTML + ERB（Embedded Ruby）で構成される
+- 画面表示を担当している
+- 構成は、HTML + ERB（Embedded Ruby）
 - erbもしくはslimというテンプレートエンジンを使用する
+- テンプレートはHTMLを生成するためのファイルである
+- Railsのコードを埋め込むことが可能
 
 **1. 作成例**
 ```bush
