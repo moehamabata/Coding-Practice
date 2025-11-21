@@ -46,3 +46,9 @@ end
 ```
 メモ：
 - PostsControllerは、投稿（Post）に関する処理を担当するクラス
+
+学んだこと：
+- ControllerはModelとViewの橋渡しである
+- 
+
+気づき・反省：
