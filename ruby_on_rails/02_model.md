@@ -1,10 +1,9 @@
 ## Model(モデル)
 
 **1. Modelとは**
-- MVCの一つ。Mにあたる。
-- データベースとのやり取りや、システムの処理などを担当している
-- データベースから情報を取り出したり、書き込む際はModelに対して指示を与える
-- Validation(データの正しさチェック)もここでしている。
+- データの保管及び処理を担当
+- データベースとやり取りをする
+- Validationもここで行う
 
 **2. modelコマンドの基本構文**
 ```bash
@@ -17,7 +16,7 @@ rails generate model モデル名
 rails g model モデル名
 ```
 メモ：
-- このように省略してもモデルを作成することができる
+- また、このように省略してもモデルの作成が可能
 
 ```bash
 rails generate model Post tittle:string content:text
@@ -31,20 +30,22 @@ rails generate model Post tittle:string content:text
 **3. app/models/post.rb(モデル本体)**
 ```ruby
 class Post < ApplicationRecord
-  validates :title,presence: true
+  validates :title, presence: true
 end
 ```
 メモ：
 - ApplicationRecord → Railsの基本モデルを継承する部分
-- validates :title → titleカラムをチェックする
-- presence: true → 空欄（nilや空文字）はNG
-→ タイトルがない投稿は保存が不可能という仕組みになる
+- validates → データが正しいかをチェックする
+- title → この部分が空だと保存ができない
 
+```ruby
 （例）
 OK : Post.new(title: "テスト", content: "本文”)
 NG : Post.new(title: nil, content: "本文")
-→ 前者は”テスト”というタイトルが入っているので保存ができる。
-しかし、後者はnilとなっているので保存ができない。
+```
+メモ：
+- 前者は”テスト”というタイトルが入っているので保存ができる。
+- しかし、後者はnilとなっているので保存ができない。
 
 **4. spec/models/post_spec.rb(モデルのテスト)**
 ```ruby
@@ -60,19 +61,16 @@ RSpec.describe Post, type: :model do
     expect(post).not_to be_valid
   end
 end
+```
 
 メモ：
 ①タイトルがあれば有効
-内容：
-- 正しいデータなら保存できる
-目的：
-- バリデーションが通るかどうかの確認
+内容：正しいデータなら保存できる
+目的：バリデーションが通るかどうかの確認
 
 ②タイトルがなければ無効
-内容：
-- タイトルなしは保存できない
-目的：
-- バリデーションが効いているか確認
+内容：タイトルなしは保存できない
+目的：バリデーションが効いているか確認
 
 補足：
 require 'rails_helper'
