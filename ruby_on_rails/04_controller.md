@@ -13,7 +13,11 @@ bin/rails generate controller Controller名 アクション1 アクション2...
 
 **2. 全体構造**
 ```ruby
+class PostsController < ApplicationController
 
+# 一覧を表示
+def index
+end
 
 
 
