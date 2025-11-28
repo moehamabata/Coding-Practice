@@ -1,9 +1,10 @@
 ## Model(モデル)
 
 **1. Modelとは**
-- MVCの一つ。Mにあたる
+- MVCの一つ。Mにあたる。
 - データベースとのやり取りや、システムの処理などを担当している
 - データベースから情報を取り出したり、書き込む際はModelに対して指示を与える
+- Validation(データの正しさチェック)もここでしている。
 
 **2. modelコマンドの基本構文**
 ```bash
@@ -11,11 +12,13 @@ rails generate model モデル名
 ```
 メモ：
 - こうすることでモデルを作成することができる
+  
 ```bash
 rails g model モデル名
 ```
 メモ：
 - このように省略してもモデルを作成することができる
+
 ```bash
 rails generate model Post tittle:string content:text
 ```
@@ -24,7 +27,7 @@ rails generate model Post tittle:string content:text
 - tittle - 投稿のタイトル名
 - content - 本文
 - Modelを作成するときは、１文字目を大文字にする
-- 
+  
 **3. app/models/post.rb(モデル本体)**
 ```ruby
 class Post < ApplicationRecord
@@ -32,6 +35,7 @@ class Post < ApplicationRecord
 end
 ```
 メモ：
+- ApplicationRecord → Railsの基本モデルを継承する部分
 - validates :title → titleカラムをチェックする
 - presence: true → 空欄（nilや空文字）はNG
 → タイトルがない投稿は保存が不可能という仕組みになる
