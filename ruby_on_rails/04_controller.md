@@ -16,10 +16,39 @@ bin/rails generate controller Controller名 アクション1 アクション2...
 class PostsController < ApplicationController
 
 # 一覧を表示
-def index
+  def index
+  end
+
+# 詳細を表示
+  def show
+  end
+
+# 新規投稿フォーム
+  def new
+  end
+
+# 投稿保存
+  def create
+  end
+
+
+# 編集フォーム
+  def edit
+  end
+
+# 更新処理
+  def edit
+  end
+
+# 更新処理
+  def update
+  end
+
+# 削除
+  def destroy
+  end
+
 end
-
-
 
 
 
