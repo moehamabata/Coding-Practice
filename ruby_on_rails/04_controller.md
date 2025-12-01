@@ -47,9 +47,13 @@ class PostsController < ApplicationController
 # 削除
   def destroy
   end
-
 end
 
+メモ：
+- class PostsController < ApplicationController
+→ PostsControllerは、Post（投稿）専用の司令塔
+→ ApplicationControllerはRuby
+ 
 
 
 
