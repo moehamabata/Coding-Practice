@@ -1,7 +1,6 @@
 ## Routingとは
 - URLをどのコントローラーアクションに振り分けるかの仕組み全体
 - URLと処理を結びつける仕組み
-- 
 - URLとControllerのアクションを結びつけてくれる
 - config/ routes.rbに記載すること
 - URLパスに基づき、HTTPリクエストを受信
@@ -18,6 +17,10 @@ Rails.application.routes.draw do
   root 'home#index'
 end
 ```
+
+**2. resources :postsとは**
+- postsに必要なCRUDのルーティングを全て自動で作ってくれること
+- 本来であれば、１行ずつ書くべき内容をこの１行で全て生成してくれる
 
 
 学んだこと：
