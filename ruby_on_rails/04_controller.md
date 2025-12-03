@@ -52,7 +52,13 @@ end
 メモ：
 - class PostsController < ApplicationController
 → PostsControllerは、Post（投稿）専用の司令塔
-→ ApplicationControllerはRuby
+→ ApplicationControllerはRailsの基本機能を全て使うことができる
+→ PostContorollerによって継承されている
+
+継承されることで使用できる機能や設定：
+- 認証機能(ログインしているかチェック)
+- フラッシュメッセージの表示
+- 共通のbefore_action
  
 
 
