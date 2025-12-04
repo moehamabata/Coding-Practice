@@ -49,22 +49,109 @@ class PostsController < ApplicationController
   end
 end
 
+①class PostsController < ApplicationController
 メモ：
-- class PostsController < ApplicationController
-→ PostsControllerは、Post（投稿）専用の司令塔
-→ ApplicationControllerはRailsの基本機能を全て使うことができる
-→ PostContorollerによって継承されている
+- ApplicationControllerはRailsの基本機能を全て受け継ぐパス
+- PostsControllerは、Post（投稿）専用の司令塔
+- 継承して初めて司令塔としてきちんと動くようになる
+- RailsのControllerとしては機能しない
 
 継承されることで使用できる機能や設定：
 - 認証機能(ログインしているかチェック)
 - フラッシュメッセージの表示
 - 共通のbefore_action
- 
+- Rescue（例外処理）の共益化
 
+継承しなかったらどうなるか：
+```ruby
+class PostsController
+```
+メモ：
+- ApplicationControllerを継承していないと、Rainsの便利機能が全て使えない
+- 継承しなかったら「ただのクラス」になる
+- 司令塔として動かすのに必要なメソッドも継承されない
+- ルーティングで呼んでも正しく動かないことが多い
 
+②def index
+メモ：
+- 投稿一覧ページを表示するメソッド
+- URL例：/posts/1(ID=1の投稿)
+- Modelから１件取得してViewに渡す
 
+```ruby
+@post=Post.find(params[:id])
+```
 
+③def show
+メモ：
+- 投稿詳細を表示するメソッド
 
+④def new
+メモ：
+- 新規投稿フォームを表示するメソッド
+- まだ保存はしていない
+- Viewに空のPostインスタンスを渡すことが多い
+
+```ruby
+@posy=Post.new
+```
+
+⑤def create
+メモ：
+- 新規投稿を保存するメソッド
+- フォームの送信後に呼ばれる
+- 実際にModelに保存する処理
+
+```ruby
+@post=Post.new(post_params)
+if @post.save
+  redirect_to@post
+else
+  render :new
+end
+```
+メモ：
+- 成功したら詳細ページ
+- 失敗したらフォームに戻る
+  
+⑥def edit
+メモ：
+- 投稿の編集ページを表示するメソッド
+- URL例：/posts/1/edit
+- 既存の投稿データを取得してフォームに表示
+
+```ruby
+@post=Post.find(params[:d])
+```
+
+⑦def update
+メモ：
+- 投稿を更新するメソッド
+- 編集フォームの送信後に呼ばれる
+- Modelのデータを更新する処理
+
+```ruby
+@post=Post.find(params[:id])
+if @post.update(post_params)
+  redeirect_to @post
+else
+  render :edit
+end
+```
+メモ：
+- 成功すれば詳細ページ
+- 失敗すれば編集フォームに戻る
+
+⑧def destroy
+メモ：
+- 投稿を削除するメソッド
+- Modelから１件削除して一覧ページにリダイレクト
+
+```ruby
+@post=Post.find(params[:id])
+@post.destroy
+  redirect_to posts_path
+```
 
 
 
