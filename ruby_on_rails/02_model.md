@@ -2,7 +2,8 @@
 
 **1. Modelとは**
 - データの保管及び処理を担当
-- データベースとやり取りをする
+- データベースからデータを取得して返す
+- データの整理もやる
 - Validationもここで行う
 
 **2. modelコマンドの基本構文**
@@ -92,6 +93,7 @@ bundle exec rspec spec/models/post_spec.rb
 学んだこと：
 - モデルはデータの設計図
 - テストは設計図通り動くか確認するチェック
+- ModelとViewは直接的にはやり取りを行わない。設計上は Controllerを介する
 - Gemfile：Modelコマンドを打つことでtittleとcontentのカラムを持つ
 
 気づき・反省：
